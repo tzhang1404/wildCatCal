@@ -1,0 +1,74 @@
+.myContainer{
+	padding: 1% 1%;
+}
+.myGrid{
+	width: 70%;
+
+}
+.myRow{
+	width: 100%;
+	float: left;
+	height: 50px;
+	border-top: 0.5px solid #babcbf;
+}
+
+.timeGrid .row{
+	border: none;
+}
+
+#weekdayHeader{
+	border: none;
+	height: 30px;
+}
+
+#weekdayTimeHeader{
+	border: none;
+	height: 30px;
+}
+
+.halfRow{
+	width: 100%;
+
+}
+
+.timeGrid{
+	width: 8%;
+	float: left;
+	text-align: center; 
+	box-sizing: border-box;
+	border-right: 1px solid #babcbf;
+}
+
+.gridContainer{
+	width: 92%;
+	float: left;
+}
+
+.myCol{
+	float: left;
+	width: 20%;
+	height: 100%;
+	box-sizing: border-box;
+	border-right: 1px solid #babcbf;
+}
+
+.weekday{
+	text-align: center; 
+	font-weight: bold;
+	padding-top: 2%;
+}
+
+.sidePanel{
+	box-sizing: border-box;
+	width: 29.5%;
+	height: 600px;
+	background: pink;
+	float: left;
+	margin-left: 0.5%;
+}
+
+.sidePanel-Header{
+	height: 20%;
+	background: blue;
+	padding: 10px 10px;
+}
