@@ -1,12 +1,61 @@
-//prepare the date and time in the add event part
-function addMonth(){
-	var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
-	for(var i = 0; i < 12; i++){
-		$("#monthSelect").append("<option>" + month[i] + "</option>");
+//global variables
+var repeatDaySelect = -1;
+
+
+
+
+function addRepeatDay(){
+	var day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+	for(var i = 0; i < 5; i++){
+		$("#repeatSelect").append("<option>" + day[i] + "</option>");
 	}
-	console.log("loaded");
 }
 
-$('#datetimepicker').data("DateTimePicker").FUNCTION()
+function addHour(){
+	for(var i = 7; i <= 19; i++){
+		$("#Hour").append("<option>" + i + "</option>");
+	}
+}
 
-addMonth();
+function addMinute(){
+	for(var i = 0; i < 60; i += 5){
+		$("#Minute").append("<option>" + i + "</option>");
+	}
+
+}
+
+function addEventListener(){
+	$("#submitButton").on("click", function(){
+		createEvent();
+	});
+
+	console.log("ready");
+}
+
+function createEvent(){
+	var hour = $("#Hour").val();
+	var minute = $("#Minute").val();
+	var day = repeatDaySelect;
+
+	console.log(hour);
+	console.log(minute);
+	console.log(day);
+}
+
+function repeatDay(){
+	var days = ["mon", "tue", "wed", "thu", "fri"];
+	for(var i = 0; i < days.length; i++){
+		$("#" + days[i]).on("click", function(){
+			repeatDaySelect = $(this).attr('id')
+			console.log(repeatDaySelect);
+		});
+	}
+}
+
+
+repeatDay();
+addEventListener();
+addRepeatDay();
+addHour(); 
+addMinute();
+

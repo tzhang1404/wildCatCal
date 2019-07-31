@@ -3,8 +3,31 @@ body{
 }
 
 .myContainer{
-	padding: 1% 1%;
+	padding: 0 1%;
+	margin-top: 0;
 }
+
+.myNavbar{
+	margin-bottom: 10px;
+}
+
+.myNavbar-header{
+	background: #6a3093;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.navBartext{
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px; 
+	margin-left: 20px;
+	float:left;
+	color: white;
+}
+
 .myGrid{
 	width: 70%;
 
@@ -68,6 +91,7 @@ body{
 	height: 600px;
 	float: left;
 	margin-left: 0.5%;
+	background: #e1d5eb;
 }
 
 .sidePanel-Header{
@@ -100,18 +124,39 @@ body{
 	width: 100%;
 	height: 400px;
 	padding: 3% 3%;
-	background: pink;
+	background: #e1d5eb	;
 }
 
 .sidePanel-main-elements{
 	margin-bottom: 10px; 
 }
 
+.timeSelect{
+	margin-bottom: 5px;
+}
+
+.repeatChoice{
+	margin-left: 20px;
+}
 #event-title{
 	border-radius: 5px; 
 }
 
-.dateInput{
-	float: left;
-	margin-right: 10px; 
+#dateInput{
+	margin-bottom: 10px;
+}
+
+#repeatText{
+	margin-bottom: 5px;
+}
+
+.repeatChoice{
+	width: 60px;
+}
+
+#submitButton{
+	background: #7d1bcf;
+	color: white;
+	margin-top: 20px;
+	float: left; 
 }
