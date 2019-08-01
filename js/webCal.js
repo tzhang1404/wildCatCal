@@ -12,49 +12,66 @@ function addRepeatDay(){
 }
 
 function addHour(){
-	for(var i = 7; i <= 19; i++){
-		$("#Hour").append("<option>" + i + "</option>");
+	for(var i = 8; i <= 19; i++){
+		$("#HourFrom").append("<option>" + i + "</option>");
+		$("#HourTo").append("<option>" + i + "</option>");
 	}
 }
 
 function addMinute(){
 	for(var i = 0; i < 60; i += 5){
-		$("#Minute").append("<option>" + i + "</option>");
+		$("#MinuteFrom").append("<option>" + i + "</option>");
+		$("#MinuteTo").append("<option>" + i + "</option>");
 	}
 
 }
 
-function addEventListener(){
-	$("#submitButton").on("click", function(){
-		createEvent();
-	});
 
-	console.log("ready");
+function resetEventPanel(){
+	$(".repeatChoice").removeClass("activeButton");
 }
 
 function createEvent(){
-	var hour = $("#Hour").val();
-	var minute = $("#Minute").val();
-	var day = repeatDaySelect;
-
-	console.log(hour);
-	console.log(minute);
-	console.log(day);
+	console.log("in");
+	var days = ["mon", "tue", "wed", "thu", "fri"];
+	var hourFrom = $("#HourFrom").val();
+	var minuteFrom = $("#MinuteFrom").val();
+	var hourTo = $("#HourTo").val();
+	var minuteTo = $("#MinuteTo").val();
+	var day = days.indexOf(repeatDaySelect);
+	var row = ".myRow." + hourFrom;
+   	var col = "> .myCol:eq(" + day + ")";
+   	$(row + col).append("<div id = '123'></div>");
+   	$("#123").addClass("activeButton");
+   	$("#123").height("400%");
 }
 
-function repeatDay(){
+function setRepeatDay(){
 	var days = ["mon", "tue", "wed", "thu", "fri"];
 	for(var i = 0; i < days.length; i++){
 		$("#" + days[i]).on("click", function(){
 			repeatDaySelect = $(this).attr('id')
-			console.log(repeatDaySelect);
 		});
 	}
 }
 
+function repeatDayButtonControl(){
+	$(".repeatChoice").click(function(){
+		$(".repeatChoice").removeClass("activeButton");
+		$(this).addClass("activeButton");
+		console.log("active");
+	})
 
-repeatDay();
-addEventListener();
+	
+}
+
+$("#submitButton").click(function(){
+		createEvent();
+		resetEventPanel();
+});
+
+setRepeatDay();
+repeatDayButtonControl();
 addRepeatDay();
 addHour(); 
 addMinute();

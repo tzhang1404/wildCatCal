@@ -67,6 +67,8 @@ body{
 }
 
 .gridContainer{
+	position: relative;
+	z-index: 0;
 	width: 92%;
 	float: left;
 }
@@ -135,6 +137,11 @@ body{
 	margin-bottom: 5px;
 }
 
+.timeChoice{
+	width: 100%;
+	margin-top: 10px;
+}
+
 .repeatChoice{
 	margin-left: 20px;
 }
@@ -160,3 +167,36 @@ body{
 	margin-top: 20px;
 	float: left; 
 }
+
+.activeButton{
+	background: #7d1bcf;
+	color: white;
+	height: 100%;
+}
+
+
+#overlay {
+  
+  width: 20%; /* Full width (cover the whole page) */
+  height: 20%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.overlayEvents{
+	position: absolute; /* Sit on top of the page content */
+	/*background-color: pink;*/
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	top: 30px; 
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+}
+
+

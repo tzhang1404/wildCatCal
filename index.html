@@ -63,6 +63,14 @@
 				</div>
 			</div>
 			<div class = "gridContainer">
+				<div class = "overlayEvents">
+					<div>
+						Event One
+					</div>
+					<div>
+						Event Two
+					</div>
+				</div>
 				<div class ="myRow" id = "weekdayHeader">
 					<div class = "myCol">
 						<div class = "weekday">
@@ -90,84 +98,85 @@
 						</div>
 					</div>
 				</div>
-				<div class = "myRow">
+				
+				<div class = "myRow 8">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 9">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 10">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 11">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 12">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 13">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 14">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 15">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 16">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 17">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 18">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 				</div>
-				<div class = "myRow">
+				<div class = "myRow 19">
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
 					<div class = "myCol"></div>
@@ -216,12 +225,21 @@
 					<input type="date" id = "dateInput">
 
 					<div class = "timeSelect">
-						<label>Time: </label>
-						<select id = "Hour">
+						<label class = "timeChoice">Time From: </label>
+						<select id = "HourFrom">
 							<option>Hour</option>
 						</select>
 
-						<select id = "Minute">
+						<select id = "MinuteFrom">
+							<option>Minute</option>
+						</select>
+
+						<label class = "timeChoice">Time To: </label>
+						<select id = "HourTo">
+							<option>Hour</option>
+						</select>
+
+						<select id = "MinuteTo">
 							<option>Minute</option>
 						</select>
 					</div>
