@@ -142,9 +142,7 @@ body{
 	margin-top: 10px;
 }
 
-.repeatChoice{
-	margin-left: 20px;
-}
+
 #event-title{
 	border-radius: 5px; 
 }
@@ -159,6 +157,11 @@ body{
 
 .repeatChoice{
 	width: 60px;
+	outline: none;
+}
+
+.repeatChoice:focus{
+	outline: none;
 }
 
 #submitButton{
@@ -176,7 +179,6 @@ body{
 
 
 #overlay {
-  
   width: 20%; /* Full width (cover the whole page) */
   height: 20%; /* Full height (cover the whole page) */
   top: 0; 
@@ -197,6 +199,23 @@ body{
   	left: 0;
   	right: 0;
   	bottom: 0;
+}
+
+.eventBlock{
+	border: 1px solid red;
+	border-radius: 3px; 
+	color: white;
+	background-color: red;  
+	width: 20%;
+	position: absolute;
+	font-size: 12px
+
+}
+
+.tuesday{
+	position: absolute;
+	left: 20%;
+	top: 100px;
 }
 
 
